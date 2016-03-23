@@ -59,7 +59,7 @@ background: linear-gradient(to bottom,  rgba(13,53,89,1) 0%,rgba(30,101,132,1) 1
 }
 
  /*FORM */
-form {
+.registration form {
 	float: left;
 	position: relative;
     overflow:hidden;	
@@ -82,7 +82,7 @@ border-top: 2px solid #a6c3cf;
 text-align: center;
 }
 
-fieldset {
+.registration fieldset {
 	float: left;
 	position: relative;
     overflow:hidden;
@@ -92,7 +92,7 @@ fieldset {
 	margin: 3px 4px 4px 0px;
 }
 
-form img {
+.registration img {
 	float: left;
 	position: relative;
     overflow:hidden;
@@ -120,7 +120,7 @@ form img {
 	margin-right: 8px;
 }
 
-input[type=submit] {
+.registration input[type=submit] {
 	background: none;
 	border: none;
 	font-family: 'lucida Sans Unicode Regular';
@@ -145,7 +145,7 @@ input[type=submit] {
 	margin-left: 20px;s
 }
 
-input[type=submit]:hover {
+.registration input[type=submit]:hover {
 	color: #bfbfbf;
 	text-decoration: underline;	
 }
@@ -192,11 +192,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#464d54', end
 	-webkit-box-shadow: 3px 3px 3px 0px rgba(180,180,180,1);
     -moz-box-shadow: 3px 3px 3px 0px rgba(180,180,180,1);
     box-shadow: 3px 3px 3px 0px rgba(180,180,180,1);
+    border: 2px solid #0a1030;
 }
 
 main ul {
+	display: block;
+	float: left;
 	margin-left: 122px;
 	height: 33px;
+	width: 480px;
 }
 
 main li {
@@ -213,6 +217,7 @@ main a {
 	line-height: 25px;
 	box-sizing: content-box;
 	font-size: 13px;
+	vertical-align: middle;
 }
 
 main a:hover {
@@ -230,37 +235,35 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f6585', end
 	border-radius: 15px;
 }
 
-.basket {
-	padding: 6px 6px 0px 100px;
-} 
-
-.basket-box{
-	text-transform: lowercase;
-	margin-top: 2px;
-
-}
-
-.text_basket {
-	font-size: 11px;
-	color: #929b9f; 
-	margin:0;
-	padding: 6px 1px 0px 3px;
-}
-
-.number_basket {
-	color: #0d5a8f; 
-	padding-left: 0px;
-	margin: 0px 10px 0px 0px;
-	padding: 6px 1px;
-	font-size: 14px;
-}
-
-.sum_basket {
+.button {
 	float: left;
-	color: #0d5a8f; 
-	padding-left: 0px;
-	margin: 0px 10px 0px 0px;
-	padding: 5px 1px;
+	width: 215px;
+	font-family: Arial Regular;
+	font-size: 11px;	
+	margin-left: 77px;
+	color: #929b9f;
+}
+
+.button input[type="button"] {
+	background: none;
+	border: none;
+	vertical-align: middle;
+}
+
+.button img {
+	margin: 6px 4px;
+}
+
+.button p {
+	float:right;
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+
+}
+
+input[type="button"]:hover {
+	text-decoration: underline;
 }
 
 
@@ -268,28 +271,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f6585', end
 section {
 	height: 134px;
 	padding: 11px 0px;
+	position: relative;
 }
 
-section h3 {
-	text-align: center;
-}
 
 .findDisc,
 .findTires,
-.findPoAvto {
+.findAvto {
 	float: left;
 	border: 1px solid #b0b0b1;
 	border-radius: 15px;
-	height: 134px;	
+	height: 143px;	
 	-webkit-box-shadow: 3px 3px 3px 0px rgba(180,180,180,1);
 -moz-box-shadow: 3px 3px 3px 0px rgba(180,180,180,1);
 box-shadow: 3px 3px 3px 0px rgba(180,180,180,1);
 	color: #154467;
 	font-size: 12px;
-}
+	font-family: Arial regular;
+} 
 
-
-.findDisc {	
+.findAvto {
 	width: 412px;	
 	margin-right: 14px;
 }
@@ -298,13 +299,300 @@ box-shadow: 3px 3px 3px 0px rgba(180,180,180,1);
 	width: 193px;
 	margin-right: 14px;	
 }
+.findDisc {	
+	width: 267px; 	
+}
 
-.findPoAvto {
-	width: 267px;	
+form.box {  /* соответсвтует форме бокс*/
+	padding: 6px 12px 26px 14px;
+	font-size: 9px;
+	font-family: Arial;
+	color: #77858b;
+	position: relative;
+}
+
+.findAvto button {  /* соответсвтует форме бокс кнопке в форме*/
+	border: none;
+	background: none;
+	cursor: pointer;
+	color: #154467;
+	font-family: Arial;
+	font-style: italic;
+	font-size: 14px;
+	bottom: 10px;
+	right: 20px;
+	border-bottom: 2px solid #A6B1BC;
+	margin-left: 151px;
+	padding: 0;
+	transition: color 0.2s ease, border-bottom;
+	outline: none;
+}
+.findAvto button:hover {
+	color: #305b80;
+	border-bottom: 2px dotted #A6B1BC;
+}
+
+.findAvto .content-left { /* соответсвтует классу файндАвто и сонтент лефт*/
+	float: left;
+	width: 180px;
+}
+
+.findAvto .content-right { /* соответсвтует классу файндАвто и сонтент лефт*/
+	float: left;
+	width: 180px;
+}
+
+.findAvto h4 {
+	margin: -2px 0 -3px 110px;
+	letter-spacing: 1.4px;
+	color: #154467;
+	font-size: 12px;
+	font-family: Arial Black;	
+}
+section h5 {
+	color: #154467;
+	font-family: Arial Black;
+	font-size: 10px;
+}
+
+.findAvto .text {
+	float: left;
+	margin: 15px 0 0 2px;
+	width: 74px;
+	font-family: Arial;
+	font-size: 10px;
+}
+.findAvto p {
+	margin-bottom: 6px;
+	margin-top: 0;
+	font-family: Arial Regular;
+	font-size: 9px;
+	color: #77858b;
+}
+
+.findAvto p strong {
+	font-weight: bold;
+	color: #000;
+}
+
+.findAvto .input {
+	float: left;
+	width: 101px;
+	margin: 6px 0 0 2px;	
+}
+
+select.marka,
+select.model,
+select.year_vipuska,
+select.komplect,
+select.razmer,
+select.razmer-two,
+select.R {
+	margin-bottom: 3px;
+	-webkit-box-shadow: inset 1px 1px 2px 0px rgba(148,148,148,1);
+-moz-box-shadow: inset 1px 1px 2px 0px rgba(148,148,148,1);
+box-shadow: inset 1px 1px 2px 0px rgba(148,148,148,1);
+}
+
+.findAvto .content-left h5 {
+	margin: -8px 0 0 5px;
+	letter-spacing: 1.3px;
+}
+.findAvto .content-right {
+	margin-left: 24px;
+}
+.findAvto .content-right h5 {
+	margin: -10px 0 0 135px;
+	letter-spacing: 1px;
+}
+
+select.marka,
+select.model,
+select.komplect {
+	width: 100px;
+}
+
+.findTires form {  /* соответсвтует форме бокс*/
+	padding: 6px 12px 26px 14px;
+	font-size: 9px;
+	font-family: Arial;
+	color: #77858b;
+	position: relative;
+}
+
+.findTires button {  
+	border: none;
+	background: none;
+	cursor: pointer;
+	color: #154467;
+	font-family: Arial;
+	font-style: italic;
+	font-size: 14px;
+	border-bottom: 2px solid #A6B1BC;
+	margin-left: 118px;
+	padding: 0;
+	transition: color 0.2s ease, border-bottom;
+	outline: none;
+}
+.findTires button:hover {
+	color: #305b80;
+	border-bottom: 2px dotted #A6B1BC;
+}
+
+.findTires h4 {
+	margin: 0px 0 -3px 8px;
+	letter-spacing: 1.4px;
+	color: #154467;
+	font-size: 12px;
+	font-family: Arial Black;	
+}
+
+.findTires .text {
+	float: left;
+	margin: 15px 0 0 2px;
+	width: 40px;
+	font-family: Arial;
+	font-size: 10px;
+}
+
+.findTires p {
+	margin-bottom: 10px;
+	margin-top: 0;
+	font-family: Arial Regular;
+	font-size: 10px;
+	color: #000;
+}
+
+.findTires .input {
+	float: left;
+	width: 120px;
+	margin: 7px 0 0 2px;	
+}
+
+.checkbox {
+	float: left;
+	width: 119px;
+	height: 44px;
+	margin-top: 7px;
 }
 
 
+.checkbox1 p {
+	float: right;
+	margin: 0px 84px 0px 0px;
+}
+
+.checkbox2 p {
+	float: right;
+	margin: 0px 84px 0px 0px;
+}
+
+.checkbox3 p {
+	float: right;
+	margin: 0px 71px 0px 0px;
+}
+
+.findDisc form {  /* соответсвтует форме бокс*/
+	padding: 0px 8px;
+	font-size: 9px;
+	font-family: Arial;
+	color: #77858b;
+	position: relative;
+}
+
+.findDisc h4 {
+	display: block;
+	width: 108px;
+	margin: 0px 0px -5px 8px;
+	letter-spacing: 1.4px;
+	color: #154467;
+	font-size: 12px;
+	font-family: Arial Black;	
+}
+
+.findDisc button {  /* соответсвтует форме бокс кнопке в форме*/
+	border: none;
+	background: none;
+	cursor: pointer;
+	color: #154467;
+	font-family: Arial;
+	font-style: italic;
+	font-size: 14px;
+	border-bottom: 2px solid #A6B1BC;
+	margin-left: 189px;
+	padding: 0;
+	transition: color 0.2s ease, border-bottom;
+	outline: none;
+}
+.findDisc button:hover {
+	color: #305b80;
+	border-bottom: 2px dotted #A6B1BC;
+}
+
+.findDisc .content-left { /* соответсвтует классу файндАвто и сонтент лефт*/
+	float: left;
+	width: 160px;
+	border-right: 1px solid #77858b;
+}
+
+.findDisc .content-right { /* соответсвтует классу файндАвто и сонтент лефт*/
+	clear: right;
+	float: right;
+	width: 80px;
+}
+
+.findDisc .text {
+	float: left;
+	margin: 15px 0 0 2px;
+	width: 74px;
+	font-family: "lucida_sans_unicode_regular";
+	font-size: 10px;
+}
+
+.findDisc p {
+	margin-bottom: 6px;
+	margin-top: 0;
+	font-family: Arial Regular;
+	font-size: 9px;
+	color: #77858b;
+}
+
+.findDisc p strong {
+	font-weight: bold;
+	color: #000;
+}
+
+.findDisc .input {
+	float: left;
+	width: 55px;
+	margin: 7px 0 0 2px;	
+}
+
+.findDisc .content-right .text {
+	float: left;
+	margin: 0;
+	width: 74px;
+	font-family: "lucida_sans_unicode_regular";
+	font-size: 10px;
+}
+
+
+select.diametr,
+select.colvokrep,
+select.dikrep,
+select.DCHO,
+select.ET {
+	margin-bottom: 10px;
+	-webkit-box-shadow: inset 1px 1px 2px 0px rgba(148,148,148,1);
+-moz-box-shadow: inset 1px 1px 2px 0px rgba(148,148,148,1);
+box-shadow: inset 1px 1px 2px 0px rgba(148,148,148,1);
+}
+
 /* MENU */
+ .clearfix {
+ 	clear: both;
+ }
+
  menu {
  	float: left;
  	width: 180px;
@@ -353,8 +641,12 @@ box-shadow: 3px 3px 3px 0px rgba(180,180,180,1);
  	border-radius: 15px;
  	margin-top: 11px;
  	text-transform: uppercase;
- 	color: #114165;
+ 	color: #114165; 	
   }
+
+.banner p{
+	padding-top: 3px;
+}
 
 .tyre {
 	clear: both;
@@ -378,13 +670,12 @@ box-shadow: 3px 3px 3px 0px rgba(180,180,180,1);
 
 .circle {
 	float: left;
-	width: 12px;
-	height: 12px;
+	width: 10px;
+	height: 10px;
 	border: 5px solid #114165;
 	border-radius: 200px;
-	margin: 1px 5px 0px 3px;	
+	margin: 2px 5px 0px 3px;	
 }
-
 
 /* CONTENT */
 .content {
@@ -484,14 +775,16 @@ background: rgb(28,94,126); /* Old browsers */
 background: -moz-linear-gradient(top,  rgba(28,94,126,1) 0%, rgba(13,54,90,1) 100%, rgba(125,185,232,1) 100%, rgba(32,124,202,1) 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top,  rgba(28,94,126,1) 0%,rgba(13,54,90,1) 100%,rgba(125,185,232,1) 100%,rgba(32,124,202,1) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom,  rgba(28,94,126,1) 0%,rgba(13,54,90,1) 100%,rgba(125,185,232,1) 100%,rgba(32,124,202,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c5e7e', endColorstr='#207cca',GradientType=0 ); /* IE6-9 */
-	-webkit-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.75);
-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.75);
 	border-radius: 15px;
 	color: #e5e9ea;
 	text-transform: uppercase;
 	font-size: 11px;
+}
+
+.choice:hover {
+	-webkit-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.75);
+box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.75);
 }
 
 .brandlogo {
