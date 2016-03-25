@@ -142,7 +142,7 @@ text-align: center;
 }
 
 .forgot input[type=submit] {
-	margin-left: 20px;s
+	margin-left: 20px;
 }
 
 .registration input[type=submit]:hover {
@@ -186,9 +186,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#464d54', end
 	position: relative;
 	overflow: hidden;
 	height: 33px;
-	width: 910px;
+	width: 100%;
 	border-radius: 5px;
-	text-transform: uppercase;
 	-webkit-box-shadow: 3px 3px 3px 0px rgba(180,180,180,1);
     -moz-box-shadow: 3px 3px 3px 0px rgba(180,180,180,1);
     box-shadow: 3px 3px 3px 0px rgba(180,180,180,1);
@@ -209,6 +208,7 @@ main li {
 	text-align: center;
 	height: 25px;
 	padding: 3px 20px 0px 10px;
+	text-transform: uppercase;
 }
 
 main a {
@@ -218,6 +218,7 @@ main a {
 	box-sizing: content-box;
 	font-size: 13px;
 	vertical-align: middle;
+	padding: 0;
 }
 
 main a:hover {
@@ -238,13 +239,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f6585', end
 .button {
 	float: left;
 	width: 215px;
+	height:33px;
 	font-family: Arial Regular;
 	font-size: 11px;	
 	margin-left: 77px;
 	color: #929b9f;
 }
 
-.button input[type="button"] {
+.button input[type="button"],
+.button-box input[type="button"] {
 	background: none;
 	border: none;
 	vertical-align: middle;
@@ -254,16 +257,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f6585', end
 	margin: 6px 4px;
 }
 
-.button p {
+.button-box {
+	float: right;
+	width: 20px;
+}
+
+.button-text {
+	float: right;
+	width: 165px;
+}
+
+.button-text p {
 	float:right;
 	display: block;
 	text-align: center;
 	vertical-align: middle;
-
+	padding: 10px 0 0 5px;
 }
 
-input[type="button"]:hover {
-	text-decoration: underline;
+.button-text p:first-child {
+	color:#0d5a8f;
+	font-size: 12px;	
+	padding-left: 11px;
+}
+
+.button-text p:nth-child(2) {
+	padding-left: 13px;
+}
+
+.button-text p:nth-child(3) {
+	color:#0d5a8f;
+	font-size: 12px;
 }
 
 
@@ -292,7 +316,7 @@ box-shadow: 3px 3px 3px 0px rgba(180,180,180,1);
 
 .findAvto {
 	width: 412px;	
-	margin-right: 14px;
+	margin-right: 15px;
 }
 
 .findTires {
@@ -576,12 +600,11 @@ select.komplect {
 	font-size: 10px;
 }
 
-
-select.diametr,
-select.colvokrep,
-select.dikrep,
-select.DCHO,
-select.ET {
+.diametr,
+.colvokrep,
+.dikrep,
+.DCHO--box,
+.ET-box {
 	margin-bottom: 10px;
 	-webkit-box-shadow: inset 1px 1px 2px 0px rgba(148,148,148,1);
 -moz-box-shadow: inset 1px 1px 2px 0px rgba(148,148,148,1);
@@ -644,7 +667,7 @@ box-shadow: inset 1px 1px 2px 0px rgba(148,148,148,1);
  	color: #114165; 	
   }
 
-.banner p{
+.banner p {
 	padding-top: 3px;
 }
 
@@ -766,22 +789,53 @@ aside .banner {
 	font-weight: bold;
 }
 
+.banner__tirebox {
+	clear: both;
+	width: 94px;
+	height: 70px;
+	padding: 6px 0px 0px 22px;
+}
+
+.tirebox--heck {
+	float:left;
+	width: 21px;
+}
+
+.tirebox--heck input[type="checkbox"] {
+	margin-top: 7px;
+}
+
+
+.tirebox-text {
+	font-family: "lucida_sans_unicode_regular-webfont";
+	font-size: 13px;
+	line-height: 24px;
+	color: #465961;
+}
+
 .choice {
+	clear: both;	
+	padding: 23px 32px;
+}
+
+.choice--sub {
 	width: 81px;
 	height: 25px;
-	margin: 21px 2px 1px 24px;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1c5e7e+0,0d365a+100,7db9e8+100,207cca+100 */
-background: rgb(28,94,126); /* Old browsers */
+	background: rgb(28,94,126); /* Old browsers */
 background: -moz-linear-gradient(top,  rgba(28,94,126,1) 0%, rgba(13,54,90,1) 100%, rgba(125,185,232,1) 100%, rgba(32,124,202,1) 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top,  rgba(28,94,126,1) 0%,rgba(13,54,90,1) 100%,rgba(125,185,232,1) 100%,rgba(32,124,202,1) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom,  rgba(28,94,126,1) 0%,rgba(13,54,90,1) 100%,rgba(125,185,232,1) 100%,rgba(32,124,202,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	border-radius: 15px;
+	border-radius: 11px;
 	color: #e5e9ea;
 	text-transform: uppercase;
 	font-size: 11px;
+	border:none;
+	-webkit-box-shadow: 3px 3px 9px 0px rgba(213,213,213,1);
+-moz-box-shadow: 3px 3px 9px 0px rgba(213,213,213,1);
+box-shadow: 3px 3px 9px 0px rgba(213,213,213,1);
 }
 
-.choice:hover {
+.choice--sub:hover {
 	-webkit-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.75);
 box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.75);
@@ -790,8 +844,8 @@ box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.75);
 .brandlogo {
 	clear: both;
 	display: table; 
-  	width: 100%; 
-  	border-spacing: 10px 10px;  	
+  	width: 693px;
+  	margin-left: 100px;   		
 }
 
 .yacheika {
@@ -804,6 +858,8 @@ box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 2px 5px 30px 0px rgba(0,0,0,0.75);
 box-shadow: 2px 5px 30px 0px rgba(0,0,0,0.75);
 } 
+
+
 
 
 /*FOOTER */

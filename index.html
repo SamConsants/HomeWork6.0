@@ -53,11 +53,19 @@
 			<li><a href="">Контакты</a></li>
 		</ul>
 		<div class="button">
-			<input type="button" class="basket"><a href="#"><img src="img/basket.png"></a></input>
-			<input type="button"><p>0,00грн</p></input>
-			<input type="button"><p>на сумму</p></input>
-			<input type="button"><p>0</p></input>
-			<input type="button"><p>товаров:</p></input>			
+			<input type="button"><a href="#"><img src="img/basket.png"></a></input>
+			<div class="button-box">
+				<input type="button"></input>
+				<input type="button"></input>
+				<input type="button"></input>
+				<input type="button"></input>
+			</div>
+			<div class="button-text">
+				<p>0,00грн</p>
+				<p>на сумму</p>
+				<p>0</p>
+				<p>товаров:</p>
+			</div>			
 		</div>
 	</main>
 	<section> <!--три колонки под главным меню-->
@@ -231,7 +239,7 @@
 				<div class="content-right">
 					<div class="DCHO">
 						<p><strong>ДЦО</strong>(диаметр центрального отверстия):</p>
-						<select class="DCHO" name="DCHO">
+						<select class="DCHO--box" name="DCHO">
 							<option value="">item1</option>
 							<option value="">item2</option>
 							<option value="">item3</option>
@@ -241,7 +249,7 @@
 					</div>
 					<div class="ET">
 						<p><strong>ЕТ</strong>(вылет диска):</p>
-						<select class="ET" name="ET">
+						<select class="ET--box" name="ET">
 							<option value="">item1</option>
 							<option value="">item2</option>
 							<option value="">item3</option>
@@ -363,21 +371,45 @@
 				<div class="icon-circle"><img src="img/icon.png"></div>			
 				<div class="catalog">Бренды:</div>
 			</div>
-			<ul>
-				<li class="banner"><div class="circle"></div><p>Шины</p></li>
-					<ul class="square">
-						<li><a href="#">Бренд 1</a></li>
-						<li><a href="#">Бренд 2</a></li>
-						<li><a href="#">Бренд 3</a></li>
-					</ul>
-				<li class="banner"><div class="circle"></div><p>Диски</p></li>
-					<ul class="square">
-						<li><a href="#">Бренд 1</a></li>
-						<li><a href="#">Бренд 2</a></li>
-						<li><a href="#">Бренд 3</a></li>
-					</ul>
-			</ul>
-			<input type="submit" class="choice" value="выбрать">
+			<div class="banner">
+				<div class="circle"></div>
+				<p>Шины</p>			
+			</div>
+			<div class="banner__tirebox">
+				<div class="tirebox--heck">
+					<input type="checkbox" name="">
+					<input type="checkbox" name="">
+					<input type="checkbox" name="">
+					<input type="checkbox" name="">						
+				</div>	
+				<div class="tirebox-text">
+					<p>Бренд 1</p>
+					<p>Бренд 2</p>
+					<p>Бренд 3</p>
+					<p>Бренд 4</p>
+				</div>							
+			</div>
+			<div class="banner">
+				<div class="circle"></div>
+				<p>Диски</p>			
+			</div>
+			<div class="banner__tirebox">
+				<div class="tirebox--heck">
+					<input type="checkbox" name="">
+					<input type="checkbox" name="">
+					<input type="checkbox" name="">
+					<input type="checkbox" name="">						
+				</div>	
+				<div class="tirebox-text">
+					<p>Бренд 1</p>
+					<p>Бренд 2</p>
+					<p>Бренд 3</p>
+					<p>Бренд 4</p>
+				</div>							
+			</div>
+			<div class="choice">
+				<input type="submit" class="choice--sub" value="выбрать">
+			</div>
 		</aside>
 		<div class="brandlogo">
 			<div class="yacheika"><img src="img/brandlogo_8.png"></div>
